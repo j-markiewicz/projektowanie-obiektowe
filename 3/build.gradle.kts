@@ -22,6 +22,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-webmvc")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("tools.jackson.module:jackson-module-kotlin")
+	implementation("org.springframework.security:spring-security-crypto")
+	implementation("org.bouncycastle:bcpkix-jdk18on:1.83")
 }
 
 kotlin {
