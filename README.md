@@ -60,3 +60,15 @@ Należy stworzyć aplikację w Go na frameworku echo. Aplikacja ma mieć jeden e
 - [x] 5.0 Należy rozszerzyć [endpoint](./4/routes.go) na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa
 
 Termin: 23.04
+
+## [Zadanie 5 - Wzorce behawioralne](./5/)
+
+React (JavaScript/Typescript) + Serwer (dowolny język)
+
+- [x] 3.0 W ramach projektu należy stworzyć komponenty [Produkty](./5/src/Products.jsx) oraz [Płatności](./5/src/Payments.jsx); komponent Produkty powinien pobierać listę produktów z aplikacji serwerowej, natomiast komponent Płatności powinien wysyłać dane płatności do aplikacji serwerowej.
+- [x] 3.5 Należy dodać komponent [Koszyk](./5/src/Cart.jsx) wraz z osobnym widokiem; aplikacja powinna umożliwiać przechodzenie pomiędzy widokami przy użyciu [routingu](./5/src/App.jsx).
+- [x] 4.0 Dane pomiędzy komponentami, takimi jak Produkty, Koszyk i Płatności, powinny być przekazywane z wykorzystaniem [React hooks](./5/src/state.ts), np. useState, useEffect lub useContext.
+- [x] 4.5 Należy przygotować [konfigurację](./5/docker-compose.yaml) umożliwiającą uruchomienie [aplikacji klienckiej](./5/Dockerfile) oraz [serwerowej](./5/server/Dockerfile) w kontenerach Docker za pomocą docker-compose.
+- [ ] 5.0 Należy wykorzystać bibliotekę axios do komunikacji z serwerem oraz skonfigurować obsługę CORS, aby frontend mógł poprawnie komunikować się z backendem.
+
+Termin: 14.05
