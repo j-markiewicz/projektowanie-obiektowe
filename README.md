@@ -69,6 +69,6 @@ React (JavaScript/Typescript) + Serwer (dowolny język)
 - [x] 3.5 Należy dodać komponent [Koszyk](./5/src/Cart.jsx) wraz z osobnym widokiem; aplikacja powinna umożliwiać przechodzenie pomiędzy widokami przy użyciu [routingu](./5/src/App.jsx).
 - [x] 4.0 Dane pomiędzy komponentami, takimi jak Produkty, Koszyk i Płatności, powinny być przekazywane z wykorzystaniem [React hooks](./5/src/state.ts), np. useState, useEffect lub useContext.
 - [x] 4.5 Należy przygotować [konfigurację](./5/docker-compose.yaml) umożliwiającą uruchomienie [aplikacji klienckiej](./5/Dockerfile) oraz [serwerowej](./5/server/Dockerfile) w kontenerach Docker za pomocą docker-compose.
-- [ ] 5.0 Należy wykorzystać bibliotekę axios do komunikacji z serwerem oraz skonfigurować obsługę CORS, aby frontend mógł poprawnie komunikować się z backendem.
+- [x] 5.0 Należy wykorzystać bibliotekę axios do [komunikacji](./5/src/App.tsx) z [serwerem](./5/src/Payments.tsx) oraz [skonfigurować obsługę CORS](./5/server/main.go), aby frontend mógł poprawnie komunikować się z backendem.
 
 Termin: 14.05

@@ -11,6 +11,9 @@ import (
 func main() {
 	e := echo.New()
 	e.Use(middleware.RequestLogger())
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"*"},
+	}))
 
 	e.GET("/products", listProducts)
 	e.GET("/products/:id", readProduct)

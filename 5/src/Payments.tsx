@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { API_ROOT } from "./main";
+import axios from "axios";
 
 function Payments() {
 	const [state, setState] = useState("initial");
@@ -11,19 +12,14 @@ function Payments() {
 	const submit = () => {
 		setState("busy");
 
-		const data = JSON.stringify({
-			name,
-			card,
-			month,
-			year,
-		});
-
-		fetch(API_ROOT + "/pay", {
-			method: "POST",
-			mode: "cors",
-			body: data,
-			headers: { "Content-Type": "application/json" },
-		}).then(() => setState("done"));
+		axios
+			.post(API_ROOT + "/pay", {
+				name,
+				card,
+				month,
+				year,
+			})
+			.then(() => setState("done"));
 	};
 
 	return (

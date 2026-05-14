@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router";
 import { AppState, CartItem, Product } from "./state";
 import { API_ROOT } from "./main";
@@ -13,8 +14,9 @@ function App() {
 	const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
 	useEffect(() => {
-		fetch(API_ROOT + "/products")
-			.then((res) => res.json())
+		axios
+			.get(API_ROOT + "/products")
+			.then((res) => res.data)
 			.then((products) => setProducts(products));
 	}, []);
 
