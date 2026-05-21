@@ -72,3 +72,14 @@ React (JavaScript/Typescript) + Serwer (dowolny język)
 - [x] 5.0 Należy wykorzystać bibliotekę axios do [komunikacji](./5/src/App.tsx) z [serwerem](./5/src/Payments.tsx) oraz [skonfigurować obsługę CORS](./5/server/main.go), aby frontend mógł poprawnie komunikować się z backendem.
 
 Termin: 14.05
+
+## [Zadanie 6 - Zapaszki](https://github.com/j-markiewicz/projob6-client)
+
+Należy sprawdzić kod projektów JS 3.0, 3.5, 4.0, kotlin, go, js - 4.5, 5.0.
+
+- [x] 3.0 Należy [skonfigurować husky + lint-staged](https://github.com/j-markiewicz/projob6-client/blob/main/package.json) uruchamianie lintowania przed commitem
+- [x] 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod [aplikacji klienckiej](https://github.com/j-markiewicz/projob6-client))
+  ![screenshot z sonarcloud z 0 błędami w aplikacji klienckiej](./6/sonar-client.png)
+- [ ] 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL <https://codeql.github.com/>
+- [ ] 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara
+- [ ] 5.0 Skonfigurować Github Actions z linterem oraz CodeQL
