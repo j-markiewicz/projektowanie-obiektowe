@@ -83,3 +83,11 @@ Należy sprawdzić kod projektów JS 3.0, 3.5, 4.0, kotlin, go, js - 4.5, 5.0.
 - [ ] 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL <https://codeql.github.com/>
 - [ ] 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara
 - [ ] 5.0 Skonfigurować Github Actions z linterem oraz CodeQL
+
+## [Zadanie 9 - Chmura](./9/)
+
+- [x] 3.0 Należy stworzyć [odpowiednie instancje](https://projob.janmarkiewicz.tech/) po stronie chmury na dockerze
+- [x] 3.5 Stworzyć [odpowiedni pipeline](./.github/workflows/ci.yaml) w Github Actions do budowania aplikacji
+- [ ] 4.0 Dodać notyfikację mailową o zbudowaniu aplikacji
+- [ ] 4.5 Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę
+- [ ] 5.0 Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions
