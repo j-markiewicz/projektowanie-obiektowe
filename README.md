@@ -84,9 +84,33 @@ Należy sprawdzić kod projektów JS 3.0, 3.5, 4.0, kotlin, go, js - 4.5, 5.0.
 - [ ] 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara
 - [ ] 5.0 Skonfigurować Github Actions z linterem oraz CodeQL
 
+## [Zadanie 7 - Vapor](./7/)
+
+Proszę napisać prostą aplikację w Vaporze, wykorzystując Leaf jako silnik szablonów or Fluent jako ORM. Proszę stworzyć trzy modele oraz CRUD dla każdego z nich. Należy stworzyć model z minimum jedną relacją. CRUD powinien mieć odzwierciedlenie w szablonach.
+
+- [ ] 3.0 Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w ORM Fluent
+- [ ] 3.5 Należy stworzyć szablony w Leaf
+- [ ] 4.0 Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją
+- [ ] 4.5 Należy wykorzystać Redis do przechowywania danych
+- [ ] 5.0 Wrzucić aplikację na heroku
+
+<https://www.heroku.com/github-students>
+
+## [Zadanie 8 - Testy](./8/)
+
+Wykorzystaj do tego zadania Selenium/Webdrivera (Kotlin, Python, Java, JS, Go, Scala)
+
+- [x] 3.0 [Przetestuj](./8/test.js) formularz rejestracji użytkownika pod kątem walidacji pól obowiązkowych oraz zachowania aplikacji po wprowadzeniu niepoprawnego formatu adresu e-mail.
+- [x] 3.5 [Przeprowadź testy](./8/test.js) bezpieczeństwa typu Cross-Site Scripting (XSS), próbując wstrzyknąć złośliwy kod JavaScript w aplikacji z Reactem
+- [ ] 4.0 Przetestuj działanie koszyka zakupowego przy jednoczesnym otwarciu aplikacji w kilku osobnych kartach tej samej przeglądarki, sprawdzając spójność stanów zamówienia (aplikacja z zadania z React'em)
+- [ ] 4.5 Do zadania z React'a należy dodać formularz logowania. Następnie przeprowadź testy podatności na ataki typu Cross-Site Request Forgery (CSRF), próbując wymusić nieautoryzowaną zmianę ustawień konta spreparowanym linkiem, podczas gdy użytkownik posiada aktywną sesję w innej karcie.
+- [ ] 5.0 Stwórz scenariusz End-to-End w Playwright (minimum 50 asercji)
+
+![screenshot testów](./8/1.png)
+
 ## [Zadanie 9 - Chmura](./9/)
 
-- [x] 3.0 Należy stworzyć [odpowiednie instancje](https://projob.janmarkiewicz.tech/) po stronie chmury na dockerze
+- [x] 3.0 Należy stworzyć [odpowiednie instancje](https://projob.janmarkiewicz.tech/products) po stronie chmury na dockerze
 - [x] 3.5 Stworzyć [odpowiedni pipeline](./.github/workflows/ci.yaml) w Github Actions do budowania aplikacji
 - [ ] 4.0 Dodać notyfikację mailową o zbudowaniu aplikacji
 - [ ] 4.5 Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę
