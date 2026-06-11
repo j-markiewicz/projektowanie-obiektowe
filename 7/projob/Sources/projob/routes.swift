@@ -2,13 +2,19 @@ import Fluent
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { req async throws in
-        try await req.view.render("index", ["title": "Hello Vapor!"])
-    }
+	app.get { req async throws -> View in
+		let products = try await Product.query(on: req.db).all().map { $0.toDTO() }
 
-    app.get("hello") { req async -> String in
-        "Hello, world!"
-    }
+		return try await req.view.render("products", ["products": products])
+	}
 
-    try app.register(collection: ProductsController())
+	app.get(":pid") { req async throws -> View in
+		guard let product = try await Product.find(req.parameters.get("pid"), on: req.db) else {
+			throw Abort(.notFound)
+		}
+
+		return try await req.view.render("product", ["product": product])
+	}
+
+	try app.register(collection: ProductsController())
 }
