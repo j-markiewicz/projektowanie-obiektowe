@@ -5,35 +5,40 @@ import struct Foundation.UUID
 /// It is recommended you write your model with sendability checking on and then suppress the warning
 /// afterwards with `@unchecked Sendable`.
 final class Product: Model, @unchecked Sendable {
-    static let schema = "products"
-    
-    @ID(key: .id)
-    var id: UUID?
+	static let schema = "products"
 
-    @Field(key: "name")
-    var name: String
+	@ID(key: .id)
+	var id: UUID?
 
-    @Field(key: "description")
-    var description: String
+	@Field(key: "name")
+	var name: String
 
-    @Field(key: "price")
-    var price: UInt32
+	@OptionalParent(key: "category")
+	var category: Cat?
 
-    init() { }
+	@Field(key: "description")
+	var description: String
 
-    init(id: UUID? = nil, name: String, description: String, price: UInt32) {
-        self.id = id
-        self.name = name
-        self.description = description
-        self.price = price
-    }
-    
-    func toDTO() -> ProductDTO {
-        .init(
-            id: self.id,
-            name: self.$name.value,
-            description: self.$description.value,
-            price: self.$price.value
-        )
-    }
+	@Field(key: "price")
+	var price: UInt32
+
+	init() { }
+
+	init(id: UUID? = nil, name: String, category: Cat? = nil, description: String, price: UInt32) {
+		self.id = id
+		self.name = name
+		self.category = category
+		self.description = description
+		self.price = price
+	}
+		
+	func toDTO() -> ProductDTO {
+		.init(
+			id: self.id,
+			name: self.$name.value,
+			category: self.$category.value,
+			description: self.$description.value,
+			price: self.$price.value
+		)
+	}
 }

@@ -90,7 +90,7 @@ Proszę napisać prostą aplikację w Vaporze, wykorzystując Leaf jako silnik s
 
 - [x] 3.0 Należy stworzyć [kontroler](./7/projob/Sources/projob/Controllers/ProductsController.swift) wraz z [modele Produktów](./7/projob/Sources/projob/Models/Product.swift) zgodny z CRUD w ORM Fluent
 - [x] 3.5 Należy stworzyć [szablony](./7/projob/Resources/Views/) w Leaf
-- [ ] 4.0 Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją
+- [x] 4.0 Należy stworzyć [drugi model](./7/projob/Sources/projob/Models/Cat.swift) oraz [kontroler](./7/projob/Sources/projob/Controllers/CategoriesController.swift) Kategorii wraz z [relacją](./7/projob/Sources/projob/Migrations/CreateCategories.swift)
 - [ ] 4.5 Należy wykorzystać Redis do przechowywania danych
 - [ ] 5.0 Wrzucić aplikację na heroku
 
@@ -98,6 +98,9 @@ Proszę napisać prostą aplikację w Vaporze, wykorzystując Leaf jako silnik s
 
 ![screenshot odpowiedzi API z produktami](./7/1.png)
 ![screenshot strony z produktami](./7/2.png)
+![screenshot strony z produktami](./7/3.png)
+![screenshot odpowiedzi API z kategoriami](./7/4.png)
+![screenshot odpowiedzi API z kategorią](./7/5.png)
 
 ## [Zadanie 8 - Testy](./8/)
 

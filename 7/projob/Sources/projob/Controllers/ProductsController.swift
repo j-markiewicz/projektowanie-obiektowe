@@ -43,6 +43,7 @@ struct ProductsController: RouteCollection {
 			.unwrap(or: Abort(.notFound))
 			.flatMap { product in
 				product.name = newProduct.name
+				product.category = newProduct.category
 				product.description = newProduct.description
 				product.price = newProduct.price
 				return product.save(on: req.db).map { product }

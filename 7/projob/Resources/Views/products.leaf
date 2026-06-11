@@ -10,6 +10,7 @@
 	#for(product in products):
 	<section>
 		<h2>#(product.name)</h2>
+		<em>#(product.category)</em>
 		<code>#(product.id)</code>
 		<p>#(product.description)</p>
 		<p>#(product.price)¤</p>
